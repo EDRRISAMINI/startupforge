@@ -1,0 +1,339 @@
+"use client";
+
+import Link from "next/link";
+
+const metrics = [
+  { label: "حجم معامله", value: "$4.8B", detail: "در بازار فولادی" },
+  { label: "پوزیشن‌های فعال", value: "128", detail: "در 10 نماد" },
+  { label: "سطح ریسک", value: "0.32%", detail: "به ازای هر معامله" },
+  { label: "دقت پیش‌بینی", value: "87%", detail: "در 30 روز گذشته" },
+];
+
+const features = [
+  { title: "تحلیل زنده بازار", text: "دریافت داده‌های لحظه‌ای، اسکالپینگ و تحلیل چندزمانه برای XAUUSD و جفت‌ارزها." },
+  { title: "ایجنت‌های تخصصی", text: "۱۰ تیم معامله‌گر تخصصی و ۱۲ عامل هوشمند برای هر نماد، با خروجی نهایی CEO." },
+  { title: "ریسک و کنترل", text: "محدودیت روزانه، توقف خسارت، Kill Switch، و محاسبه سایز پوزیشن بر اساس Equity." },
+  { title: "MT5 و JustMarkets", text: "پیوستگی امن به MT5، بررسی وضعیت حساب، پوزیشن‌ها و سفارش‌های فعال." },
+];
+
+const strategyCards = [
+  "Fast Scalping",
+  "Range Trading",
+  "Adaptive Momentum",
+  "Smart Money Concepts",
+  "Gold Specialist",
+];
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-slate-950 text-white" dir="rtl">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(234,179,8,0.15),transparent_35%,transparent_100%)]" />
+
+      <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+        <div className="flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-300 via-yellow-500 to-emerald-500 text-lg font-black text-slate-950 shadow-lg shadow-amber-500/25">
+            S
+          </div>
+          <div>
+            <p className="text-lg font-black tracking-tight text-white">SUPER AGENT TRADERS</p>
+            <p className="text-[10px] uppercase tracking-[0.28em] text-slate-400">OMARI GROUP</p>
+          </div>
+        </div>
+
+        <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+          <Link href="#overview">نمای کلی</Link>
+          <Link href="#features">ویژگی‌ها</Link>
+          <Link href="#agents">ایجنت‌ها</Link>
+          <Link href="#connect">اتصال</Link>
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <Link href="/dashboard" className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-100 transition hover:border-amber-400 hover:text-white">
+            داشبورد
+          </Link>
+          <Link href="/dashboard" className="rounded-full bg-gradient-to-r from-amber-400 via-yellow-500 to-emerald-500 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg shadow-amber-500/30">
+            ورود به سیستم
+          </Link>
+        </div>
+      </header>
+
+      <section className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-6 pb-18 pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:pb-28 lg:pt-16">
+        <div>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1.5 text-xs font-medium text-amber-200">
+            پلتفرم هوشمند معاملاتی و ریسک‌محور
+          </div>
+
+          <h1 className="max-w-xl text-4xl font-black tracking-tight text-white md:text-6xl">
+            سیستم معاملاتی هوشمند برای بازارهای واقعی با ریسک کنترل‌شده.
+          </h1>
+
+          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+            پلتفرم SUPER AGENT TRADERS با هماهنگی تیم‌های AI، تحلیل بازار زنده، اتصال به MT5، ریسک‌مندی مستقل و استراتژی‌های تخصصی، برای معامله‌گران حرفه‌ای و مدیران سرمایه طراحی شده است.
+          </p>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Link href="/dashboard" className="rounded-full bg-gradient-to-r from-amber-400 via-yellow-500 to-emerald-500 px-6 py-3 text-center font-bold text-slate-950 shadow-xl shadow-amber-500/30">
+              شروع تحلیل بازار
+            </Link>
+            <Link href="#connect" className="rounded-full border border-slate-700 px-6 py-3 text-center font-semibold text-slate-100 transition hover:border-slate-500 hover:bg-slate-900">
+              نحوه اتصال MT5
+            </Link>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-6 text-sm text-slate-300">
+            {metrics.map((item) => (
+              <div key={item.label}>
+                <span className="block text-2xl font-bold text-white">{item.value}</span>
+                <span className="text-slate-400">{item.label}</span>
+                <span className="mt-1 block text-xs text-slate-500">{item.detail}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-3xl border border-slate-800 bg-slate-900/80 p-4 shadow-2xl shadow-amber-950/30 backdrop-blur">
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-5">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">XAUUSD</p>
+                <p className="mt-2 text-lg font-semibold text-white">طلا / دلار</p>
+              </div>
+              <div className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-medium text-emerald-300">
+                LIVE
+              </div>
+            </div>
+
+            <div className="mt-5 space-y-4">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-slate-400">قیمت فعلی</span>
+                  <span className="text-xs text-emerald-400">+1.42%</span>
+                </div>
+                <p className="mt-2 text-3xl font-black text-white">$2,677.40</p>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+                  <p className="text-xs text-slate-400">سمت بازار</p>
+                  <p className="mt-2 text-sm font-medium text-emerald-300">Bullish</p>
+                </div>
+                <div className="rounded-xl border border-slate-800 bg-slate-900 p-3">
+                  <p className="text-xs text-slate-400">سطح ریسک</p>
+                  <p className="mt-2 text-sm font-medium text-white">0.32%</p>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-3">
+                <p className="text-xs uppercase tracking-[0.2em] text-amber-200">تایید نهایی</p>
+                <p className="mt-2 text-base font-semibold text-white">BUY — تایید با 82% اطمینان</p>
+                <p className="mt-2 text-sm text-slate-300">بررسی چندزمانه، ریسک/پاداش مثبت و کانال جریان نقدینگی معتبر.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mb-12 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Overview</p>
+          <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">نمای کلی سیستم معاملاتی</h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {features.map(({ title, text }) => (
+            <div key={title} className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-emerald-500 text-sm font-bold text-slate-950">
+                ✓
+              </div>
+              <h3 className="text-xl font-semibold text-white">{title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="features" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mb-12 max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-300">Strategies</p>
+          <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">استراتژی‌های فعال پلتفرم</h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {strategyCards.map((strategy, index) => (
+            <div key={strategy} className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6">
+              <div className="mb-4 text-sm font-semibold text-amber-300">0{index + 1}</div>
+              <h3 className="text-xl font-semibold text-white">{strategy}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                تحلیل دقیق، فیلتر سوئینگ، تایید چندزمانه و اجرای مبتنی بر قوانین ریسک تعریف‌شده.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="agents" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="mb-12 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Super Agents</p>
+          <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">تیم تخصصی 120 عامل هوشمند</h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {[
+            ["CEO", "تأیید نهایی تصمیم و هماهنگ‌سازی تیم‌ها"],
+            ["Market Analyst", "بررسی سیگنال‌های بازار و آماده‌سازی داده"],
+            ["Technical Analysis", "اندیکاتورها و ساختار قیمتی"],
+            ["Risk Assessment", "کنترل ریسک و سایز پوزیشن"],
+          ].map(([name, text]) => (
+            <div key={name} className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6">
+              <div className="mb-4 h-10 w-10 rounded-full bg-gradient-to-br from-amber-500/20 to-emerald-500/20 ring-1 ring-amber-400/30" />
+              <h3 className="text-lg font-semibold text-white">{name}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="connect" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="rounded-3xl border border-emerald-500/30 bg-emerald-500/10 p-8 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">MT5 Connection</p>
+          <h2 className="mt-4 text-3xl font-black text-white md:text-4xl">اتصال امن به MT5 و JustMarkets</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-200">
+            اتصال از طریق Bridge ایمن، با احراز هویت، بررسی وضعیت کد، و بررسی صحت پاسخ‌های MT5 قبل از اجازه اجرای سفارشات واقعی.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <Link href="/dashboard" className="rounded-full bg-gradient-to-r from-emerald-400 to-amber-400 px-6 py-3 text-center font-bold text-slate-950">
+              ورود به ارتباط‌گیری MT5
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <footer className="relative z-10 border-t border-slate-800 py-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-slate-400 md:flex-row lg:px-8">
+          <p>© 2026 SUPER AGENT TRADERS — OMARI GROUP</p>
+          <div className="flex gap-6">
+            <Link href="#overview">نمای کلی</Link>
+            <Link href="#features">استراتژی‌ها</Link>
+            <Link href="#connect">ارتباط</Link>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
