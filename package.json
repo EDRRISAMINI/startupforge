@@ -1,1 +1,79 @@
-{"name": "startupforge","private": true,"scripts": {"dev": "next dev","build": "next build","start": "next start","lint": "next lint"},"dependencies": {"lucide-react": "^0.453.0","next": "14.2.15","react": "18.3.1","react-dom": "18.3.1"},"devDependencies": {"@types/node": "20.14.12","@types/react": "18.3.3","@types/react-dom": "18.3.0","autoprefixer": "10.4.20","eslint": "8.57.0","eslint-config-next": "14.2.15","postcss": "8.4.41","tailwindcss": "3.4.10","typescript": "5.5.4"}}
+# StartupForge
+
+StartupForge is an AI startup studio that turns an idea into a startup package: market analysis, product strategy, technical blueprint, brand direction, pitch deck, and MVP roadmap.
+
+## Features
+
+- Idea-to-startup workflow
+- Multi-agent startup planning
+- Market and product analysis
+- Technical guidance and stack recommendations
+- Brand and pitch support
+- Dashboard for managing generated startup outputs
+
+## Tech stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- React
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:3000
+
+## Project structure
+
+- `app/` — app pages and routes
+- `app/dashboard` — startup workspace page
+- `app/api/startup` — mock startup generation API
+- `app/globals.css` — design system styling
+
+## Notes
+
+This version is a polished MVP frontend with a working mock agent workflow and realistic startup generation flow. It is ready to be extended with real AI orchestration, auth, Stripe, and a persistent database.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
