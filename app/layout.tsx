@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "StartupForge",
-  description: "AI startup studio turning ideas into startup plans, product strategy, and MVPs.",
+  title: "Zehn Barter | زهن برتر",
+  description: "AI startup studio for turning ideas into startup strategy, MVPs, and product plans — completely free.",
 };
 
 export default function RootLayout({
@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fa" dir="rtl">
       <body className="bg-slate-950 text-slate-100 antialiased">{children}</body>
     </html>
   );
