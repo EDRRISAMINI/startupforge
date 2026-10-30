@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-slate-950 text-white" dir="rtl">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.18),transparent_40%,transparent_100%)]" />
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
@@ -181,7 +181,7 @@ export default function Home() {
 
       <section id="free" className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="rounded-3xl border border-emerald-500/30 bg-emerald-500/10 p-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">رایگان برای همه</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">رایگان</p>
           <h2 className="mt-4 text-3xl font-black text-white md:text-4xl">همه امکانات Zehn Barter کاملاً رایگان هستند</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-200">
             هیچ پلنی پولی وجود ندارد. ایده شما، خروجی‌ها و ابزارها همه برای شما رایگان هستند تا بتوانید سریع شروع کنید.
@@ -207,48 +207,3 @@ export default function Home() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

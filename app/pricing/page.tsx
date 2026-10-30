@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-slate-950 text-white" dir="rtl">
       <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-violet-500 to-cyan-400 text-lg font-black text-slate-950">
@@ -23,7 +23,7 @@ export default function PricingPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-300">رایگان</p>
           <h1 className="mt-4 text-4xl font-black text-white md:text-5xl">همه امکانات Zehn Barter رایگان‌اند</h1>
           <p className="mt-4 text-lg text-slate-300">
-            هیچ هزینه‌ای برای استفاده از ابزارها، خروجی‌ها و پروژه‌ها وجود ندارد. همه چیز برای شروع و ساخت ایده شما آماده است.
+            هیچ هزینه‌ای برای استفاده از ابزارها، خروجی‌ها و پروژه‌ها وج��د ندارد. همه چیز برای شروع و ساخت ایده شما آماده است.
           </p>
         </div>
 
