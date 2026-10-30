@@ -1,0 +1,77 @@
+# StartupForge
+
+StartupForge is an AI startup studio that turns an idea into a startup package: market analysis, product strategy, technical blueprint, brand direction, pitch deck, and MVP roadmap.
+
+## Features
+
+- Idea-to-startup workflow
+- Multi-agent startup planning
+- Market and product analysis
+- Technical guidance and stack recommendations
+- Brand and pitch support
+- Dashboard for managing generated startup outputs
+
+## Tech stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- React
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:3000
+
+## Project structure
+
+- `app/` — app pages and routes
+- `app/dashboard` — startup workspace page
+- `app/api/startup` — mock startup generation API
+- `app/globals.css` — design system styling
+
+## Notes
+
+This version is a polished MVP frontend with mock agent logic and a realistic startup generation flow. It is ready to be extended with real AI orchestration, auth, Stripe, and a persistent database.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
